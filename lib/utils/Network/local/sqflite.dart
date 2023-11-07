@@ -15,7 +15,7 @@ class SqlDb {
 
   intialDb() async {
     String databasepath = await getDatabasesPath();
-    String path = join(databasepath, 'wael.db');
+    String path = join(databasepath, 'notes.db');
     Database mydb = await openDatabase(path,
         onCreate: _onCreate, version: 3, onUpgrade: _onUpgrade);
     return mydb;
